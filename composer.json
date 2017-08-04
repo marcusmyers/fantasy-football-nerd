@@ -1,0 +1,29 @@
+{
+  "name": "marcusmyers/fantasy-football-nerd",
+  "description": "Fantasy Football Nerd API package",
+  "keywords": ["football", "fantasy", "fantasy-football-nerd", "fantasy-football"],
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Mark Myers",
+      "email": "marcusmyers@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.2",
+    "coderabbi/phpumoji": "dev-master",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "MarkMyers\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
