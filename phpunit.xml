@@ -13,7 +13,7 @@
          emojiset="extended">
     <testsuites>
         <testsuite name="Mox Test Suite">
-            <directory>tests</directory>
+            <directory>test</directory>
         </testsuite>
     </testsuites>
     <filter>
