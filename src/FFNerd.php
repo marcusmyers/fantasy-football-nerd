@@ -12,26 +12,21 @@ use Exception;
 
 class FFNerd extends ApiRequest
 {
-  protected $api_key;
 
-  public function getApiKey() {
-      if (!isset($this->api_key) || $this->api_key == "" || null !== getenv('FFNERD_API_KEY')) {
-          throw UndefinedKey::api();
-      }
+  public static function apiKey() {
+    if(getenv('FFNERD_API_KEY') === false) {
+        throw UndefinedKey::api();
+    }
 
-      return $this->api_key;
-  }
-
-  public function setApiKey($key) {
-    $this->api_key = ($key != "") ? $key : getenv('FFNERD_API_KEY');
+    return getenv('FFNERD_API_KEY');
   }
 
   public function currentWeek() {
-    return $this->requestService('schedule', $this->api_key)['currentWeek'];
+    return $this->requestService('schedule', self::apiKey())['currentWeek'];
   }
 
   public function collectionRequest($service_name, $json_key = '', $extra = []) {
-      $data = $json_key != '' ? $this->requestService($service_name, $this->api_key, $extra)[$json_key] : $this->requestService($service_name, $this->api_key, $extra);
+      $data = $json_key != '' ? $this->requestService($service_name, self::apiKey(), $extra)[$json_key] : $this->requestService($service_name, self::apiKey(), $extra);
       return new Collection($data);
   }
 
@@ -56,7 +51,7 @@ class FFNerd extends ApiRequest
   }
 
   public function weather() {
-      return $this->requestService('weather', $this->api_key);
+      return $this->requestService('weather', self::apiKey());
   }
 
   public function auctionValues($ppr = null) {
@@ -96,7 +91,7 @@ class FFNerd extends ApiRequest
           throw NoWeekArgument::create();
       }
 
-      return $this->requestService('weekly-rankings', $this->api_key, [ $pos, $week, $ppr ]);
+      return $this->requestService('weekly-rankings', self::apiKey(), [ $pos, $week, $ppr ]);
   }
 
   public function weeklyProjections($pos = "", $week = "") {
@@ -108,7 +103,7 @@ class FFNerd extends ApiRequest
           throw noweekargument::create();
       }
 
-      return $this->requestService('weekly-projections', $this->api_key, [ $pos, $week ]);
+      return $this->requestService('weekly-projections', self::apiKey(), [ $pos, $week ]);
   }
 
   public function weeklyIdpRankings() {

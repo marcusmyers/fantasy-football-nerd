@@ -8,6 +8,6 @@ class UndefinedKey extends Exception
 {
     public static function api() : UndefinedKey
     {
-        return new static("Api does not exist");
+        return new static("Api key does not exist");
     }
 }
