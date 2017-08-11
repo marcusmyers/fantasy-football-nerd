@@ -15,7 +15,7 @@ class FFNerd extends ApiRequest
   protected $api_key;
 
   public function getApiKey() {
-      if (!isset($this->api_key) || $this->api_key == "") {
+      if (!isset($this->api_key) || $this->api_key == "" || null !== getenv('FFNERD_API_KEY')) {
           throw UndefinedKey::api();
       }
 
