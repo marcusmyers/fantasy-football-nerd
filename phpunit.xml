@@ -11,14 +11,14 @@
          printerFile="vendor/coderabbi/phpumoji/src/EmojiPrinter.php"
          printerClass="Coderabbi\Phpumoji\EmojiPrinter"
          emojiset="extended">
-    <testsuites>
-        <testsuite name="Mox Test Suite">
-            <directory>test</directory>
-        </testsuite>
-    </testsuites>
-    <filter>
-        <whitelist>
-          <directory suffix=".php">src/</directory>
-        </whitelist>
-    </filter>
+  <testsuites>
+      <testsuite name="Mox Test Suite">
+          <directory>test</directory>
+      </testsuite>
+  </testsuites>
+  <filter>
+      <whitelist>
+        <directory suffix=".php">src/</directory>
+      </whitelist>
+  </filter>
 </phpunit>

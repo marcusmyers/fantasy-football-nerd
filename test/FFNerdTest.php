@@ -13,7 +13,11 @@ class FFNerdTest extends TestCase
 {
   public function setUp() {
       $this->f = new FFNerd();
-      $this->f->setApiKey('test');
+      putenv("FFNERD_API_KEY=test");
+  }
+
+  private function unsetKey() {
+      putenv("FFNERD_API_KEY");
   }
 
   /** @test */
@@ -23,14 +27,15 @@ class FFNerdTest extends TestCase
 
   /** @test */
   public function it_should_have_an_api_set() {
-      $this->assertEquals('test', $this->f->getApiKey());
+      $this->assertEquals('test', FFNerd::apiKey());
   }
 
   /** @test */
   public function it_should_throw_undefined_key_exception_when_no_api_key_is_set() {
       $this->expectException(UndefinedKey::class);
-      $this->f->setApiKey("");
-      $this->f->getApiKey();
+      $this->unsetKey();
+
+      $this->f->currentWeek();
   }
 
   /** @test */
