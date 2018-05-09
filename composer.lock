@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "b13c43eb45bf4f9021bb5d67b22135c3",
@@ -422,16 +422,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.6.20",
+            "version": "v5.6.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "4f2551485d5d0661fc199045e2502d93992307b5"
+                "reference": "b1647c80bb48321aa537d2e332930089848ecb8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/4f2551485d5d0661fc199045e2502d93992307b5",
-                "reference": "4f2551485d5d0661fc199045e2502d93992307b5",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/b1647c80bb48321aa537d2e332930089848ecb8e",
+                "reference": "b1647c80bb48321aa537d2e332930089848ecb8e",
                 "shasum": ""
             },
             "require": {
@@ -468,7 +468,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2018-05-03T01:43:20+00:00"
+            "time": "2018-05-08T15:48:57+00:00"
         }
     ],
     "packages-dev": [
