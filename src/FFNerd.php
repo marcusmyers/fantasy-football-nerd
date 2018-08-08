@@ -42,7 +42,11 @@ class FFNerd extends ApiRequest
       return $this->collectionRequest('players', 'Players');
   }
 
-  public function byes($week) {
+  public function byes($week = null) {
+      if ( $week == null) {
+          return $this->collectionRequest('byes');
+      }
+
       if (($week < 4) || ($week > 12)) {
           throw OutOfRange::create();
       }
@@ -120,4 +124,6 @@ class FFNerd extends ApiRequest
   public function depthCharts() {
       return $this->collectionRequest('depth-charts', 'DepthCharts');
   }
+
+
 }
