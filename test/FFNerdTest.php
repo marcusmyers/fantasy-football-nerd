@@ -90,6 +90,13 @@ class FFNerdTest extends TestCase
   }
 
   /** @test */
+  public function it_should_return_all_weeks_and_teams_with_byes() {
+      $byeTeams = $this->f->byes();
+      $this->assertCount(9, $byeTeams);
+      $this->assertEquals('CAR', $byeTeams->first()[0]['team']);
+  }
+
+  /** @test */
   public function it_should_return_a_collection_of_auction_values() {
       $auction = $this->f->auctionValues();
       $this->assertEquals('100', $auction->first()['SalaryCap']);
