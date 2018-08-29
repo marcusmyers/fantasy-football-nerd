@@ -298,7 +298,7 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
@@ -367,16 +367,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.6.34",
+            "version": "v5.6.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "4f506b0eb99bc3136fbcf4b50ff53554ad6be91d"
+                "reference": "5a3d46df67deda1bbd4fae855cbc6403a8ce433c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/4f506b0eb99bc3136fbcf4b50ff53554ad6be91d",
-                "reference": "4f506b0eb99bc3136fbcf4b50ff53554ad6be91d",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/5a3d46df67deda1bbd4fae855cbc6403a8ce433c",
+                "reference": "5a3d46df67deda1bbd4fae855cbc6403a8ce433c",
                 "shasum": ""
             },
             "require": {
@@ -413,7 +413,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2018-08-21T18:07:53+00:00"
+            "time": "2018-08-28T11:41:37+00:00"
         }
     ],
     "packages-dev": [
