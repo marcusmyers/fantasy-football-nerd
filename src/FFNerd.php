@@ -38,8 +38,8 @@ class FFNerd extends ApiRequest
       return $this->collectionRequest('schedule', 'Schedule');
   }
 
-  public function players() {
-      return $this->collectionRequest('players', 'Players');
+  public function players($position = '') {
+      return $this->collectionRequest('players', 'Players', [$position]);
   }
 
   public function byes($week = null) {
@@ -59,6 +59,10 @@ class FFNerd extends ApiRequest
   }
 
   public function auctionValues($ppr = null) {
+      return $this->collectionRequest('auction-enhanced', '', [$ppr]);
+  }
+
+  public function auctionEnhanced($ppr = null) {
       return $this->collectionRequest('auction-enhanced', '', [$ppr]);
   }
 
@@ -125,5 +129,15 @@ class FFNerd extends ApiRequest
       return $this->collectionRequest('depth-charts', 'DepthCharts');
   }
 
+  public function nflPicks() {
+    return $this->collectionRequest('nfl-picks', 'games');
+  }
 
+  public function defensiveRankings() {
+    return $this->collectionRequest('defense-rankings', 'DefenseRankings');
+  }
+
+  public function dailyFantasy($platform = 'draftkings') {
+    return $this->collectionRequest('daily', '', [$platform]);
+  }
 }
