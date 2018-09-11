@@ -76,6 +76,15 @@ class FFNerdTest extends TestCase
   }
 
   /** @test */
+  public function it_should_return_collection_of_players_by_position() {
+      $players = $this->f->players('QB');
+
+      $this->assertCount(128, $players);
+      $this->assertEquals('CAR', $players->first()['team']);
+      $this->assertEquals('Derek Anderson', $players->first()['displayName']);
+  }
+
+  /** @test */
   public function it_should_return_collection_of_teams_with_byes_for_week_4() {
       $byeTeams = $this->f->byes(4);
       $this->assertCount(2, $byeTeams);
@@ -99,6 +108,13 @@ class FFNerdTest extends TestCase
   /** @test */
   public function it_should_return_a_collection_of_auction_values() {
       $auction = $this->f->auctionValues();
+      $this->assertEquals('100', $auction->first()['SalaryCap']);
+      $this->assertEquals('8', $auction->first()['Teams']);
+  }
+
+  /** @test */
+  public function it_should_return_a_collection_of_auction_enhanced() {
+      $auction = $this->f->auctionEnhanced();
       $this->assertEquals('100', $auction->first()['SalaryCap']);
       $this->assertEquals('8', $auction->first()['Teams']);
   }
@@ -237,5 +253,17 @@ class FFNerdTest extends TestCase
       $this->assertArrayHasKey('RB', $depth->first());
       $this->assertArrayHasKey('QB', $depth->first());
       $this->assertArrayHasKey('WR2', $depth->first());
+  }
+
+  /** @test */
+  public function it_should_return_collection_nfl_picks() {
+      $picks = $this->f->nflPicks();
+      $this->assertCount(15, $picks);
+  }
+
+  /** @test */
+  public function it_should_return_collection_defensive_rankings() {
+      $dranks = $this->f->defensiveRankings();
+      $this->assertCount(32, $dranks);
   }
 }
