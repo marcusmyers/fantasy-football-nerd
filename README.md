@@ -9,13 +9,15 @@ API](http://www.fantasyfootballnerd.com/fantasy-football-api) which
 > consensus ranking.
 
 This packge currently supports all Level 1 and Level 2 streams which cost
-$11.95 per season -- a total no-brainer if you're into fantasy sports
+$14.95 per season -- a total no-brainer if you're into fantasy sports
 and programming.
 
 ## Setup
 
 First, [sign up](http://www.fantasyfootballnerd.com/create-account) for
 a Fantasy Football Nerd account.
+
+Then run the following in your project to work with the api.
 
 ```
 composer require marcusmyers/fantasy-football-nerd
