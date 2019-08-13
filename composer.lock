@@ -2109,6 +2109,7 @@
                 {
                     "name": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
+
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
