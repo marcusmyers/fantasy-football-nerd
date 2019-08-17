@@ -12,7 +12,7 @@ This packge currently supports all Level 1 and Level 2 streams which cost
 $14.95 per season -- a total no-brainer if you're into fantasy sports
 and programming.
 
-## Setup
+## Install
 
 First, [sign up](http://www.fantasyfootballnerd.com/create-account) for
 a Fantasy Football Nerd account.
@@ -22,3 +22,27 @@ Then run the following in your project to work with the api.
 ```
 composer require marcusmyers/fantasy-football-nerd
 ```
+
+## Usage
+
+If working with a framework you could do the following.
+
+```php
+use MarkMyers\FFNerd\FFNerd;
+
+$client = new FFNerd();
+
+$byes = $client->byes();
+```
+
+When working with plain old php you could something like the following.
+
+```php
+require_once 'vendor/autoload.php';
+
+$client = new FFNerd();
+
+$byes = $client->byes();
+```
+
+If you have problems using the package please create an [issue](https://github.com/marcusmyers/fantasy-football-nerd/issues/new) and I'll try and address it when I have time.
