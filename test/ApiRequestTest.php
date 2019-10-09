@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class ApiRequestTest extends TestCase
 {
-    public function setUp() {
+    public function setUp() :void {
         $this->r = new ApiRequest();
     }
 

@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class FFNerdTest extends TestCase
 {
-  public function setUp() {
+  public function setUp() : void {
       $this->f = new FFNerd();
       putenv("FFNERD_API_KEY=test");
   }
